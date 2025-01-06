@@ -1,10 +1,10 @@
 *.iml
 .kotlin
 .gradle
+!composeApp/build/dist/wasmJs/productionExecutable
 **/build/
 xcuserdata
 !src/**/build/
-!composeApp/build/dist/wasmJs/productionExecutable
 local.properties
 .idea
 .DS_Store
