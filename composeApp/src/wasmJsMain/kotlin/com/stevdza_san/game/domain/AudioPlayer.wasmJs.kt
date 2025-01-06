@@ -67,7 +67,8 @@ actual class AudioPlayer {
     }
 
     private fun createAudioElement(fileName: String): Audio {
-        val path = "composeApp/build/dist/wasmJs/productionExecutable/composeResources/files/$fileName"
+        val path = "composeResources/files/$fileName"
+//        val path = "composeApp/build/dist/wasmJs/productionExecutable/composeResources/files/$fileName"
 //        val path = "src/commonMain/composeResources/files/$fileName"
         return Audio(path).apply {
             onerror = { _, _, _, _, _ ->
