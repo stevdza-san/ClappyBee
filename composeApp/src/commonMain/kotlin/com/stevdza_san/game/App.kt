@@ -145,8 +145,8 @@ fun App() {
                             durationMillis = when(platform) {
                                 Platform.Android -> 4000
                                 Platform.iOS -> 4000
-                                Platform.Web -> 8000
-                                Platform.Desktop -> 7000
+                                Platform.Web -> 9000
+                                Platform.Desktop -> 8000
                             },
                             easing = LinearEasing
                         ),
