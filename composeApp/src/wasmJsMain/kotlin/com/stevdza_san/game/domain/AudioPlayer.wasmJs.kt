@@ -67,9 +67,6 @@ actual class AudioPlayer {
     }
 
     private fun createAudioElement(fileName: String): Audio {
-//        val path = "files/$fileName"
-//        val path = "composeResources/files/$fileName"
-//        val path = "composeApp/build/dist/wasmJs/productionExecutable/composeResources/files/$fileName"
         val path = "composeResources/clappybee.composeapp.generated.resources/files/$fileName"
 //        val path = "src/commonMain/composeResources/files/$fileName"
         return Audio(path).apply {
