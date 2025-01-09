@@ -16,12 +16,12 @@ data class Game(
     val platform: Platform,
     val screenWidth: Int = 0,
     val screenHeight: Int = 0,
-    val gravity: Float = 0.8f,
+    val gravity: Float = if (platform == Platform.Android) 0.8f else if (platform == Platform.iOS) 0.8f else 0.25f,
     val beeRadius: Float = 30f,
-    val beeJumpImpulse: Float = -12f,
-    val beeMaxVelocity: Float = if (platform == Platform.Android) 25f else 10f,
+    val beeJumpImpulse: Float = if (platform == Platform.Android) -12f else if (platform == Platform.iOS) -12f else -8f,
+    val beeMaxVelocity: Float = if (platform == Platform.Android) 25f else if(platform == Platform.iOS) 20f else 20f,
     val pipeWidth: Float = 150f,
-    val pipeVelocity: Float = if (platform == Platform.Android) 5f else 2.5f,
+    val pipeVelocity: Float = if (platform == Platform.Android) 5f else if(platform == Platform.iOS) 7f else 2.5f,
     val pipeGapSize: Float = if (platform == Platform.Android) 250f else 300f
 ) : KoinComponent {
     private val audioPlayer: AudioPlayer by inject()
@@ -182,7 +182,7 @@ data class Game(
         return horizontalCollision && !beeInGap
     }
 
-    fun stopTheBee() {
+    private fun stopTheBee() {
         beeVelocity = 0f
         bee = bee.copy(y = 0f)
     }
