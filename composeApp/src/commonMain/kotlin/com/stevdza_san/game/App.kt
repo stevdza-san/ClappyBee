@@ -23,9 +23,6 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -69,6 +66,9 @@ import com.stevdza_san.sprite.component.drawSpriteView
 import com.stevdza_san.sprite.domain.SpriteSheet
 import com.stevdza_san.sprite.domain.SpriteSpec
 import com.stevdza_san.sprite.domain.rememberSpriteState
+import compose.icons.FeatherIcons
+import compose.icons.feathericons.Play
+import compose.icons.feathericons.RefreshCw
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.imageResource
 import org.jetbrains.compose.resources.painterResource
@@ -325,7 +325,7 @@ fun App() {
                     }
                 ) {
                     Icon(
-                        imageVector = Icons.Default.PlayArrow,
+                        imageVector = FeatherIcons.Play,
                         contentDescription = null,
                         tint = Color.White
                     )
@@ -375,7 +375,7 @@ fun App() {
                     }
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Refresh,
+                        imageVector = FeatherIcons.RefreshCw,
                         contentDescription = null,
                         tint = Color.White
                     )
